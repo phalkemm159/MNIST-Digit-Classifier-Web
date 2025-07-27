@@ -23,6 +23,9 @@ def load_mnist_model():
         return False
     return True
 
+# Load model at the global level so gunicorn can access it
+load_mnist_model()
+
 def preprocess_image(image_data):
     try:
         # Decode base64 string to bytes
@@ -93,7 +96,8 @@ def health():
     return jsonify({'status': 'healthy', 'model_loaded': model is not None})
 
 if __name__ == '__main__':
-    if load_mnist_model():
+    # This is only used for local development
+    if model is not None:
         print("Starting Flask app...")
         app.run(debug=True, host='0.0.0.0', port=5000)
     else:
