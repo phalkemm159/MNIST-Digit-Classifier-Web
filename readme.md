@@ -71,9 +71,10 @@ http://127.0.0.1:5000
 Draw a digit on the canvas and click Predict!
 
 ## 🌐 Deployment
-This app is deployed at:
+This app is deployed at : Railway 
+Link
 https://mnist-digit-classifier-project.up.railway.app/
-Railway
+
 
 ## 📦 Dependencies
 Flask
