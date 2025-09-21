@@ -86,8 +86,9 @@ NumPy
 Pillow
 
 Install with:
-
+```
 pip install -r requirements.txt
+```
 
 ## ✨ Demo
 Give it a Try : https://mnist-digit-classifier-project.up.railway.app/
